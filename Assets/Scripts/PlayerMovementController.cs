@@ -1,23 +1,43 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovementController : MonoBehaviour
 {
-    public int score;
-    // Start is called before the first frame update
-    void Start()
+    public float speed = 10;
+    float horizontalInput;
+    public float leftAndRightMultiplier = 2;
+
+    public Rigidbody rb;
+
+    bool isAlive = true;
+
+    private void FixedUpdate()
     {
-        score = 0;
+        if (!isAlive) return;
+        Vector3 forward = transform.forward * speed * Time.fixedDeltaTime;
+        Vector3 leftAndRight = transform.right * horizontalInput * speed * Time.fixedDeltaTime * leftAndRightMultiplier;
+        rb.MovePosition(rb.position + forward + leftAndRight);
     }
 
-    // Update is called once per frame
     void Update()
     {
+        horizontalInput = Input.GetAxis("Horizontal");
+
+        if (transform.position.y < -5)
+        {
+            Die();
+        }
+    }
+
+    public void Die()
+    {
+        isAlive = false;
+        Invoke("Restart", 2);
         
     }
-    private void MoveForward()
+    
+    void Restart()
     {
-        Debug.Log("hey");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
