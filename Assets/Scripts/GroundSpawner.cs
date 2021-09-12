@@ -9,14 +9,20 @@ public class GroundSpawner : MonoBehaviour
     {
         for (int i = 0; i < 20; i++)
         {
-            SpawnNextTile();
+            SpawnNextTile(i>3); 
         }
     }
 
-    public void SpawnNextTile()
+    public void SpawnNextTile(bool spawnItems)
     {
         GameObject temp = Instantiate(groundTileSystem, nextSpawnPoint, Quaternion.identity);
         nextSpawnPoint = temp.transform.GetChild(1).transform.position;
+
+        if (spawnItems)
+        {
+            temp.GetComponent<GroundTile>().SpawnObstacle();
+            temp.GetComponent<GroundTile>().SpawnCoins();
+        }
     }
 
   }
