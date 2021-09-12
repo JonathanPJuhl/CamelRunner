@@ -2,7 +2,13 @@ using UnityEngine;
 
 public class GroundTile : MonoBehaviour
 {
+    
+
     GroundSpawner groundSpawn;
+    [SerializeField] GameObject coinPrefab;
+    [SerializeField] GameObject obstaclePrefab;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,12 +24,11 @@ public class GroundTile : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    /*void Update()
     {
         
-    }
+    }*/
 
-    public GameObject obstaclePrefab;
 
     void SpawnObstacle()
     {
@@ -33,7 +38,6 @@ public class GroundTile : MonoBehaviour
         Instantiate(obstaclePrefab, spawnpoint.position, Quaternion.identity, transform);
     }
 
-    public GameObject coinPrefab;
 
     void SpawnCoins()
     {

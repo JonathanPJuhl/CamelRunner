@@ -8,7 +8,7 @@ public class GameManager1 : MonoBehaviour
 
     public int score;
     public static GameManager1 inst;
-    public Text scoreText;
+    [SerializeField] Text scoreText;
 
     public void IncrementScore()
     {

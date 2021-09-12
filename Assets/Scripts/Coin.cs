@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Coin : MonoBehaviour
 {
-    public float rotation = 90f;
+    [SerializeField] float rotation = 90f;
     // Start is called before the first frame update
     void Start()
     {

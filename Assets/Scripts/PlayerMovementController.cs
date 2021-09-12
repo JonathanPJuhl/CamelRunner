@@ -5,9 +5,9 @@ public class PlayerMovementController : MonoBehaviour
 {
     public float speed = 10;
     float horizontalInput;
-    public float leftAndRightMultiplier = 2;
+    [SerializeField] float leftAndRightMultiplier = 2;
 
-    public Rigidbody rb;
+    [SerializeField] Rigidbody rb;
 
     bool isAlive = true;
 
