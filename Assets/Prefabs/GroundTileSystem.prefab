@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1109811378514085588}
   - component: {fileID: 8742280423837694743}
   - component: {fileID: 3193611166917963095}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 2782342002680959724}
   - component: {fileID: 1674357282185228168}
   - component: {fileID: 3353614295626174660}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: GroundTileSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -158,8 +158,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4233deb952c8e1a4394584be39cd2b0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstaclePrefab: {fileID: 1723922736192140073, guid: f55b6f0470c980649b18d499c4a1d8ee, type: 3}
   coinPrefab: {fileID: 378129295930881843, guid: 977c3c4ac3e565f49ab7409573b068cb, type: 3}
+  obstaclePrefab: {fileID: 1723922736192140073, guid: f55b6f0470c980649b18d499c4a1d8ee, type: 3}
 --- !u!1 &7231683560252994468
 GameObject:
   m_ObjectHideFlags: 0
@@ -169,7 +169,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4426372282620226933}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: LeftObstacleSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -199,7 +199,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1315075023639795459}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: RightObstacleSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -229,7 +229,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 732316303911417436}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: MiddleObstacleSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -259,7 +259,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6345833924473145109}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: NextTile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
