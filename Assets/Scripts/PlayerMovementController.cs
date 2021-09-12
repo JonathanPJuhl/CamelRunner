@@ -9,6 +9,7 @@ public class PlayerMovementController : MonoBehaviour
 
     [SerializeField] Rigidbody rb;
 
+    public float speedIncreasePerPoint = 0.1f;
     bool isAlive = true;
 
     private void FixedUpdate()

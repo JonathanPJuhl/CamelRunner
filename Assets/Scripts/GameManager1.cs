@@ -6,14 +6,17 @@ using UnityEngine.UI;
 public class GameManager1 : MonoBehaviour
 {
 
-    public int score;
+    int score;
     public static GameManager1 inst;
     [SerializeField] Text scoreText;
+    [SerializeField] PlayerMovementController playerMovement;
 
     public void IncrementScore()
     {
         score++;
         scoreText.text = "Score: " + score;
+        // Increase the player's speed
+        playerMovement.speed += playerMovement.speedIncreasePerPoint;
     }
     private void Awake()
     {
